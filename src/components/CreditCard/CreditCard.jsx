@@ -7,7 +7,6 @@ const CreditCard = ({ cardNumber, name }) =>{
         <div className='container-fluid credit-card'>
             <div className='row logo-row'>
                 <div className='col-12'>
-                    logo
                 </div>
             </div>
             <div className='row card-number-row'>

@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -12,7 +10,11 @@ function App() {
   const [name, setName] = useState("Mary Smith")
 
   const handleCardNumberUpdate = (event) =>{
-    const newCardNumber = event.target.value;
+    const maxLength = 16;
+
+    const newCardNumber = event.target.value
+                          .replace(/[^0-9]/g, '')
+                          .slice(0, maxLength);
 
     if (newCardNumber == ""){
       setCardNumber("0000 0000 0000 0000")
@@ -27,7 +29,6 @@ function App() {
     const spacedInput = strippedInput.replace(/(.{4})/g, '$1 ');
     const finalInput = spacedInput.trim();
     return finalInput;
-
   }
 
   const handleNameUpdate = (event) =>{
@@ -43,14 +44,15 @@ function App() {
     
     <div className='container-fluid' style={{height: '100vh'}}>
       <div className='row vh-100'>
-        <div className='col-xs-12 col-sm-12 col-md-4 bg-primary position-relative'>
+        <div className='card-col col-xs-12 col-sm-12 col-md-4 position-relative'>
           <CreditCard cardNumber={cardNumber} name={name}></CreditCard>
         </div>
-        <div className='col-xs-12 col-sm-12 col-md-8 form-col'>
+        <div className='form-col col-xs-12 col-sm-12 col-md-8'>
+          
           <form>
             <div className="form-group">
               <label htmlFor="cardNumber">CARD NUMBER</label>
-              <input onChange={handleCardNumberUpdate} type="number" className="form-control" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000"/>
+              <input onChange={handleCardNumberUpdate} value={cardNumber === "0000 0000 0000 0000" ? "" : cardNumber}  className="form-control" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000"/>
             </div>
 
             <div className="form-group">
