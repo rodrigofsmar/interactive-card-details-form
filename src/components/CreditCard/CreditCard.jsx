@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './CreditCard.css'
 
-const CreditCard = ({ cardNumber, name }) =>{
+const CreditCard = ({ cardNumber, name, expirationDate }) =>{
     return(
         <>
         <div className='container-fluid credit-card'>
@@ -19,7 +19,7 @@ const CreditCard = ({ cardNumber, name }) =>{
                     {name}
                 </div>
                 <div className='col-4'>
-                    09/23
+                    {expirationDate}
                 </div>
             </div>
         </div>
