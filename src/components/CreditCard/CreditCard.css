@@ -9,10 +9,8 @@
     -webkit-box-shadow: 21px 7px 54px -22px rgba(0,0,0,0.75);
     -moz-box-shadow: 21px 7px 54px -22px rgba(0,0,0,0.75);
     box-shadow: 21px 7px 54px -22px rgba(0,0,0,0.75);
-    position: absolute;
-    top: 30%;
-    left: 35%;
     border: 0.5px solid #F6F6F6;
+    margin-top: 2rem;
 }
 
 .logo-row{
@@ -29,5 +27,40 @@
     height: 30%;
     margin: 0px;
 }
+
+
+@media (max-width: 575.98px) {
+    
+}
+  
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+  
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .credit-card{
+        position: absolute;
+        top: 30%;
+        left: 35%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .credit-card{
+        position: absolute;
+        top: 30%;
+        left: 35%;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .credit-card{
+        position: absolute;
+        top: 30%;
+        left: 35%;
+    }
+}
+  
+  
 
 

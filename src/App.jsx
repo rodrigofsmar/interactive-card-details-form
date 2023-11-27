@@ -55,13 +55,13 @@ function App() {
 
   return (
     
-    <div className='container-fluid' style={{height: '100vh'}}>
+    <div className='container-fluid'>
       <div className='row vh-100'>
         <div className='card-col col-xs-12 col-sm-12 col-md-4 position-relative'>
           <CreditCard cardNumber={cardNumber} name={name} expirationDate={expirationDate}></CreditCard>
         </div>
-        <div className='form-col col-xs-12 col-sm-12 col-md-8'>
-          <form className="needs-validation" noValidate>
+        <div className='form-col col-xs-12 col-sm-12 col-md-8 my-auto'>
+          <form className="needs-validation">
             <div className="form-group mb-3">
               <label htmlFor="cardNumber">CARD NUMBER</label>
               <input onChange={handleCardNumberUpdate} value={cardNumber === defaultCardNumber ? "" : cardNumber}  className="form-control" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000"/>
@@ -71,13 +71,13 @@ function App() {
                 <input onChange={handleNameUpdate} type="name" className="form-control" id="cardholderName" placeholder="e.g. Mary Smith" required/>
             </div>
             <div className="row mb-3">
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <label htmlFor='expirationDate' className="form-label">EXPIRATION DATE (MM/YY)</label>
                 <input onChange={handleExpirationDateUpdate} value={expirationDate === defaultExpirationDate ? "" : expirationDate} type='text' className='form-control' id='expirationDate' placeholder='MM / YY' pattern="\d{2} / \d{2}" required></input>
               </div>
-              <div className='col-6'>
+              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
                 <label className="form-label">CVC</label>
-                <input type="text" className="form-control" id="expirationYear" placeholder="e.g. 123" pattern="\d{3}" required />
+                <input type="text" className="form-control" id="expirationYear" placeholder="e.g. 123" pattern="\d{3}" maxLength="3" required />
               </div>
             </div>
             <button type="submit" className="btn btn-primary w-100">Submit</button>
