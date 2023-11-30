@@ -73,7 +73,7 @@ function App() {
             <div className="row mb-3">
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <label htmlFor='expirationDate' className="form-label">EXPIRATION DATE (MM/YY)</label>
-                <input onChange={handleExpirationDateUpdate} value={expirationDate === defaultExpirationDate ? "" : expirationDate} type='text' className='form-control' id='expirationDate' placeholder='MM / YY' pattern="\d{2} / \d{2}" required></input>
+                <input onChange={handleExpirationDateUpdate} value={expirationDate === defaultExpirationDate ? "" : expirationDate} type='text' className='form-control' id='expirationDate' placeholder='MM / YY' pattern="\d{2}/\d{2}" required></input>
               </div>
               <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
                 <label className="form-label">CVC</label>

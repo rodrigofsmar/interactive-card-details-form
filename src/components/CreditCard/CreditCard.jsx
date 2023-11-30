@@ -5,8 +5,9 @@ const CreditCard = ({ cardNumber, name, expirationDate }) =>{
     return(
         <>
         <div className='container-fluid credit-card'>
-            <div className='row logo-row'>
-                <div className='col-12'>
+            <div className='row logo-row justify-content-start'>
+                <div className='col-12 h-100'>
+                    <img src='src\assets\coins.svg' className='h-50'></img>
                 </div>
             </div>
             <div className='row card-number-row'>
